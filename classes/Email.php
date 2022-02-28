@@ -42,8 +42,6 @@ class Email
         $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a>";        
         $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje</p>";
         $contenido .= '</html>';
-        $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
-        $contenido .= '</html>';
         $mail->Body = $contenido;
 
         // Enviar el mail
