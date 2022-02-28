@@ -38,9 +38,9 @@ class Email
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
-        $contenido .= "<p><strong>Hola " . $this->email . "</strong> Has creado tu cuenta en 
+        $contenido .= "<p><strong>Hola " . $this->email . "</strong>. Has creado tu cuenta en 
         App Salon, solo debes confirmar presionando el siguiente enlace</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://appsalon-newversion.herokuapp.com/confirmar-cuenta?token="
+        $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/confirmar-cuenta?token="
             . $this->token . "'>Confirmar Cuenta</a> </p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= '</html>';
@@ -72,7 +72,7 @@ class Email
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
-        $contenido .= "<p><strong>Hola " . $this->email . "</strong> Has solicitado
+        $contenido .= "<p><strong>Hola " . $this->email . "</strong>. Has solicitado
         reestablecer tu password, sigue el siguiente enlace para hacerlo.</p>";
         $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/recuperar?token="
             . $this->token . "'>Reestablecer Password</a> </p>";
