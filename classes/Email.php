@@ -38,9 +38,11 @@ class Email
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
-        $contenido .= "<p><strong>Hola " . $this->email .  "</strong> Has Creado tu cuenta en App Salón, solo debes confirmarla presionando el siguiente enlace</p>";
-        $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a>";        
-        $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje</p>";
+        $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenta en 
+        App Salon, solo debes confirmar presionando el siguiente enlace</p>";
+        $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/confirmar-cuenta?token="
+            . $this->token . "'>Confirmar Cuenta</a> </p>";
+        $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= '</html>';
         $mail->Body = $contenido;
 
