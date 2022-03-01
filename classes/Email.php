@@ -30,7 +30,7 @@ class Email
         $mail->Password = '967fd10dcd24f3';
 
         $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress($this->nombre);
+        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Set HTML
@@ -40,7 +40,7 @@ class Email
         $contenido = '<html>';
         $contenido .= "<p><strong>Hola " . $this->email . "</strong>. Has creado tu cuenta en 
         App Salon, solo debes confirmar presionando el siguiente enlace</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar-cuenta?token="
+        $contenido .= "<p>Presiona aquí: <a href='https://appsalon-newversion.herokuapp.com/confirmar-cuenta?token="
             . $this->token . "'>Confirmar Cuenta</a> </p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= '</html>';

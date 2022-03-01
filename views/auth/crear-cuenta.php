@@ -19,7 +19,7 @@ include_once __DIR__ . "/../templates/alertas.php";
 
     <div class="campo">
         <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono" value="<?php echo s($usuario->telefono); ?>" />
+        <input type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono + 56 9 123 45 678" value="<?php echo s($usuario->telefono); ?>" />
     </div>
 
     <div class="campo">
