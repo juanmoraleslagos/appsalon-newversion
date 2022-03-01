@@ -21,7 +21,7 @@ class Router
     {
         // Proteger Rutas...
         session_start();
-        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' :  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method === 'GET') {
